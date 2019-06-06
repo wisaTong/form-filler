@@ -36,11 +36,11 @@ export default class FormPage extends React.Component {
     render() {
       const { rows } = this.state
       return (
-        <div>
-          <button onClick={ () => {window.print()} }>Print</button>
-          <button onClick={ () => { this.downloadHighPDF() } }>PDF</button>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', }} id="hello">
+        <div style={{ textAlign: 'center' }}>
+          <button onClick={ () => {window.print()} } style={{ margin: '2rem 0', fontSize: '1rem', }}>Print</button>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} id="hello">
             <RequestForm data={rows}/>
+            <hr style={{ border: '1px dashed', width: 'calc(210mm - 25.4mm)', margin: '10mm 0' }}/>
             <RequestForm data={rows}/>
           </div>
         </div>

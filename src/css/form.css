@@ -5,3 +5,8 @@
 .border {
   border: 1px solid;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
