@@ -10,14 +10,31 @@ export default class BookingTable extends React.Component {
         const API_KEY = process.env.REACT_APP_API_KEY;
         const SHEET_ID = process.env.REACT_APP_SHEET_ID;
 
-        fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A3:K?key=${API_KEY}`)
+        fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A2:K?key=${API_KEY}`)
             .then(res => res.json())
             .then(json => this.setState({ rows: json['values'] }));
     }
 
     render() {
-        console.log(this.state.rows);
-        
-        return <p>{this.state.rows[0][0]}</p>
+        console.log(this.state.rows)
+        return ( 
+            <table>
+                <thead>
+                    <tr>
+                        {this.state.rows[0].map(cell => (
+                            <th>{cell}</th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.state.rows.map((row, index) => {
+                        if (index != 0) return (
+                        <tr>
+                            {row.map(cell => (<td>{cell}</td>))}
+                        </tr>
+                    )})}
+                </tbody>
+            </table>
+        );
     }
 }
