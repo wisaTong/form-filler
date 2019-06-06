@@ -1,5 +1,14 @@
 @media print {
   button {
-    visibility: hidden;
+    display: none;
   }
+}
+
+body {
+  font-family: Sarabun, sans-serif;
+  font-size: .95rem;
+}
+
+input {
+  font-family: Sarabun, sans-serif;
 }
