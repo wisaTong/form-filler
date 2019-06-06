@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/vistec-logo.svg'
+import '../css/form.css';
 
 export default class RequestForm extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ export default class RequestForm extends React.Component {
 
     render() {
       return (
-        <div style={{ border: '1px solid', width: '80vw' }}>
+        <div style={{ border: '1px solid', width: '80vw' }} id="requestForm">
           <div style={{ display: 'flex' }}>
             <div style={{ flex: '1', border: '1px solid' }}>
               <img src={logo} alt="Logo" />
