@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import FormPage from '../pages/FormPage'
 
 export default class BookingTable extends React.Component {
   constructor(props) {
@@ -35,7 +37,7 @@ export default class BookingTable extends React.Component {
                   {row.map(cell => (<td>{cell}</td>))}
                   <td>
                     <button onClick={() => {
-                      console.log(row)
+                      ReactDOM.render(<FormPage data={row}/>, document.getElementById('root'));
                     }}>
                       Print
                     </button>
