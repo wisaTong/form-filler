@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import './css/App.css';
 import C from './components/C'
-import RequestForm from './components/RequestForm'
+import FormPage from './pages/FormPage'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Route exact path="/" component={C} />
-          <Route path="/form" component={RequestForm} />
+          <Route path="/form" component={FormPage} />
         </header>
       </div>
     </Router>
