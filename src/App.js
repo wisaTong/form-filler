@@ -11,8 +11,8 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Route exact path="/" component={BookingTable} />
-          <Route path="/form" component={FormPage} />
         </header>
+        <Route path="/form" component={FormPage} />
       </div>
     </Router>
   );

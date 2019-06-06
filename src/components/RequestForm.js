@@ -68,26 +68,31 @@ export default class RequestForm extends React.Component {
               </div>
               <div style={{ flex: '1', flexDirection: 'column', border: '1px solid' }}>
                 <div style={{ flex: '1', border: '1px solid' }}>
-                  <span>REQUESST FOR ONE WAY TRIP</span>
+                  <span>REQUEST FOR ONE WAY TRIP</span>
                 </div>
                 <div style={{ display: 'flex' }}>
                   <span style={{ flex: '1', border: '1px solid' }}>TIME</span>
                   <span style={{ flex: '1', border: '1px solid' }}>FROM</span>
                   <span style={{ flex: '1', border: '1px solid' }}>TO</span>
+                  <span style={{ flex: '1', border: '1px solid' }}>PERSON</span>
                 </div>
               </div>
               <div style={{ flex: '1', flexDirection: 'column', border: '1px solid' }}>
                 <div style={{ flex: '1', border: '1px solid' }}>
-                  <span>REQUESST FOR ONE WAY TRIP</span>
+                  <span>REQUEST FOR ONE WAY TRIP</span>
                 </div>
                 <div style={{ display: 'flex' }}>
                   <span style={{ flex: '1', border: '1px solid' }}>TIME</span>
                   <span style={{ flex: '1', border: '1px solid' }}>FROM</span>
                   <span style={{ flex: '1', border: '1px solid' }}>TO</span>
+                  <span style={{ flex: '1', border: '1px solid' }}>PERSON</span>
                 </div>
               </div>
+              <div style={{ width: '10vw', flexDirection: 'column', border: '1px solid' }}>
+                <span>NOTE</span>
+              </div>
             </div>
-            <div style={{ display: 'flex', border: '1px solid', height: '50px' }}>
+            <div style={{ display: 'flex', border: '1px solid', height: 'auto' }}>
               <div style={{ width: '10vw', border: '1px solid' }}>
               </div>
               <div style={{ display: 'flex', flex: '1', flexDirection: 'row', }}>
@@ -100,26 +105,51 @@ export default class RequestForm extends React.Component {
                 <div style={{ flex: '1', border: '1px solid' }}>
                   3
                 </div>
-              </div>
-              <div style={{ display: 'flex', flex: '1', flexDirection: 'row', }}>
-                <div style={{ flex: '1', border: '1px solid' }}>
-                  1
-                </div>
-                <div style={{ flex: '1', border: '1px solid' }}>
-                  2
-                </div>
                 <div style={{ flex: '1', border: '1px solid' }}>
                   3
                 </div>
+              </div>
+              <div style={{ display: 'flex', flex: '1', flexDirection: 'column', }}>
+                <div style={{ display: 'flex' }}>
+                  <div style={{ flex: '1', border: '1px solid' }}>
+                    Deapart:
+                  </div>
+                  <div style={{ flex: '1', border: '1px solid' }}>
+                    2
+                  </div>
+                  <div style={{ flex: '1', border: '1px solid' }}>
+                    3
+                  </div>
+                  <div style={{ flex: '1', border: '1px solid' }}>
+                    3
+                  </div>
+                </div>
+                <div style={{ display: 'flex' }}>
+                  <div style={{ flex: '1', border: '1px solid' }}>
+                    Return:
+                  </div>
+                  <div style={{ flex: '1', border: '1px solid' }}>
+                    2
+                  </div>
+                  <div style={{ flex: '1', border: '1px solid' }}>
+                    3
+                  </div>
+                  <div style={{ flex: '1', border: '1px solid' }}>
+                    3
+                  </div>
+                </div>
+              </div>
+              <div style={{ width: '10vw' }}>
+                <span>100000</span>
               </div>
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ flex: '1', textAlign: 'left' }}>
                 INTERNAL USE ONLY <br/>
-                PLEASE SUBMIT REQUEST 2 DAY IN ADVANCE
+                PLEASE SUBMIT REQUEST 2 DAYS IN ADVANCE
               </div>
               <div style={{ flex: '1', textAlign: 'left' }}>
-                Recieved by:<br/>
+                Received by:<br/>
                 Date
               </div>
             </div>
