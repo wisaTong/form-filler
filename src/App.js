@@ -9,10 +9,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
+        <header>
           <Route exact path="/" component={BookingTable} />
+          <Route path="/form" component={FormPage} />
         </header>
-        <Route path="/form" component={FormPage} />
       </div>
     </Router>
   );
