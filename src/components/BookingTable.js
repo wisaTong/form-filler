@@ -15,7 +15,7 @@ export default class BookingTable extends React.Component {
 
     fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A3:K?key=${API_KEY}`)
       .then(res => res.json())
-      .then(json => this.setState({ rows: json['values'], isLoaded: true }));
+      .then(json => this.setState({ rows: json['values'].sort(), isLoaded: true }));
   }
 
   // render() {
@@ -52,18 +52,6 @@ export default class BookingTable extends React.Component {
   //   );
   // }
 
-  TableHeader() {
-    return (
-      <div class="table-header">
-        <h1>Passenger</h1>
-        <h1>Pickup</h1>
-        <h1>Drop-off</h1>
-        <h1>Driver</h1>
-        <h1>Status</h1>
-      </div>
-    );
-  }
-
   TableRow(props) {
     const row = props.row;
     const status = row[10];
@@ -79,7 +67,7 @@ export default class BookingTable extends React.Component {
           <h3>Passenger</h3>
           <p>Name: {row[0]}</p>
           <p>Phone number: {row[1]}</p>
-        </div>        
+        </div>
         <div class="slot trip">
           <div class="pickup">
             <h3>Pickup</h3>
