@@ -37,7 +37,8 @@ export default class FormPage extends React.Component {
       const { rows } = this.state
       return (
         <div style={{ textAlign: 'center' }}>
-          <button onClick={ () => {window.print()} } style={{ margin: '2rem 0', fontSize: '1rem', }}>Print</button>
+          <button onClick={ () => {window.print()} } style={{ margin: '2rem', fontSize: '1rem', }}>Print</button>
+          <button onClick={ () => {window.location.reload()} } style={{ margin: '2rem', fontSize: '1rem', }}>Back</button>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} id="hello">
             <RequestForm data={rows}/>
             <hr style={{ border: '1px dashed', width: 'calc(210mm - 25.4mm)', margin: '10mm 0' }}/>
