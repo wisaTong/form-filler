@@ -16,7 +16,7 @@ export default class BookingTable extends React.Component {
 
     fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A3:K?key=${API_KEY}`)
       .then(res => res.json())
-      .then(json => this.setState({ rows: json['values'].sort(), isLoaded: true }));
+      .then(json => this.setState({ rows: json['values'].sort((a, b) => a[10] - b[10]), isLoaded: true }));
   }
   
   ColorDesc(props) {
