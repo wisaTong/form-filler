@@ -1,25 +1,40 @@
 .container {
   padding: 5rem;
-  background-color: #F7F8FA;
+  color: grey;
+  text-align: left;
 }
 
-.table-header {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
+h3 {
+  margin-bottom: 1rem; 
+}
+
+button {
+  border: none; /* Remove borders */
+  padding: 15px 40px; /* Add some padding */
+  color: white;
+  cursor: pointer;
+  border-radius: 45px;
+  background-color: #7F7F87;
+  transition: background-color .3s ease;
+}
+
+button:hover {
+  background-color: #262626;  
+}
+
+button:focus {
+  outline: none;
 }
 
 .row-card {
   position: relative;
-  color: gray;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
   margin: 1rem 0;
   border-radius: 10px;
-  padding: 1rem 0;
-  text-align: left;
+  padding: 1.5rem 10%;
   background-repeat:no-repeat; 
   background-position:
     0  0,
@@ -60,7 +75,7 @@
 }
 
 .trip div {
-  margin: 0 1.75rem;
+  margin: 0 2.75rem;
 }
 
 .slot {
