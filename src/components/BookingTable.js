@@ -18,40 +18,6 @@ export default class BookingTable extends React.Component {
       .then(json => this.setState({ rows: json['values'].sort(), isLoaded: true }));
   }
 
-  // render() {
-  //   console.log(this.state.rows)
-  //   return (
-  //     <div class="container">
-  //       <table>
-  //         <thead>
-  //           <tr>
-  //             {this.state.rows[0].map(cell => (
-  //               <th>{cell}</th>
-  //             ))}
-  //             <th>Print</th>
-  //           </tr>
-  //         </thead>
-  //         <tbody>
-  //           {this.state.rows.map((row, index) => {
-  //             if (index !== 0) return (
-  //               <tr>
-  //                 {row.map(cell => (<td>{cell}</td>))}
-  //                 <td>
-  //                   <button onClick={() => {
-  //                     ReactDOM.render(<FormPage data={row}/>, document.getElementById('root'));
-  //                   }}>
-  //                     Print
-  //                   </button>
-  //                 </td>
-  //               </tr>
-  //             )
-  //           })}
-  //         </tbody>
-  //       </table>
-  //     </div>
-  //   );
-  // }
-
   TableRow(props) {
     const row = props.row;
     const status = row[10];
