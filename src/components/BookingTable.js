@@ -30,7 +30,7 @@ export default class BookingTable extends React.Component {
 
   TableRow(props) {
     const row = props.row;
-    const status = row[10];
+    const status = row[10] ? row[10].toLowerCase() : '';
 
     let statusStyle = (s) => {
       if (!s)  return 'status-null';
